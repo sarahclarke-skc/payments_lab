@@ -12,7 +12,7 @@ public class CreditCardTest {
     @Before
     public void before() {
         ArrayList<Double> charges = new ArrayList<>();
-        creditCard = new CreditCard("012345", "12/25", "432", charges , 5000.00, 12.00);
+        creditCard = new CreditCard("012345", "12/25", "432", charges , 5000.00, 1.5);
     }
 
     @Test
@@ -26,5 +26,11 @@ public class CreditCardTest {
         creditCard.charge(5.00);
         assertEquals(2, creditCard.getCharges().size());
         assertEquals(4990.00, creditCard.getCreditLimit(), 0.001);
+    }
+
+    @Test
+    public void canGetTransactionFee() {
+        creditCard.getTransactionFee(1000.00);
+        assertEquals(4997.00, creditCard.getCreditLimit(), 0.001);
     }
 }
