@@ -19,4 +19,12 @@ public class DebitCardTest {
     public void hasCardNumber() {
         assertEquals("012345", debitCard.getCardNumber());
     }
+
+    @Test
+    public void canAddChargeToList() {
+        debitCard.charge(500.00);
+        debitCard.charge(500.00);
+        debitCard.charge(500.00);
+        assertEquals(3, debitCard.getCharges().size());
+    }
 }

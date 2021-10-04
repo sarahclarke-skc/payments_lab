@@ -18,4 +18,8 @@ public class DebitCard extends PaymentCard {
     public String getAccountNumber() {
         return accountNumber;
     }
+
+    public void charge(double purchaseAmount) {
+        addCharge(purchaseAmount);
+    }
 }
