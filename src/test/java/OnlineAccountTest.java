@@ -11,9 +11,8 @@ public class OnlineAccountTest {
 
     @Before
     public void before() {
-        ArrayList<String> paymentMethods = new ArrayList<>();
-        ArrayList<Double> transactions = new ArrayList<>();
-        onlineAccount = new OnlineAccount("Jane Smith", paymentMethods, transactions);
+        onlineAccount = new OnlineAccount("Jane Smith");
+        //add instances of credit, debit, and gift
     }
 
     @Test

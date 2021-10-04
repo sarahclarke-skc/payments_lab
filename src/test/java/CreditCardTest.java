@@ -11,6 +11,7 @@ public class CreditCardTest {
 
     @Before
     public void before() {
+        //not sure about the arraylist here
         ArrayList<Double> charges = new ArrayList<>();
         creditCard = new CreditCard("012345", "12/25", "432", charges , 5000.00, 1.5);
     }

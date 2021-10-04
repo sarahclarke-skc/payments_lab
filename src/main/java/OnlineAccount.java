@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class OnlineAccount {
 
     private String name;
-    private ArrayList paymentMethods;
-    private ArrayList transactions;
+    private ArrayList<IChargeable> paymentMethods;
+    private ArrayList<Double> transactions;
 
-    public OnlineAccount(String name, ArrayList<String> paymentMethods, ArrayList<Double> transactions) {
+    public OnlineAccount(String name) {
         this.name = name;
-        this.paymentMethods = paymentMethods;
-        this.transactions = transactions;
+        this.paymentMethods = new ArrayList<IChargeable>();
+        this.transactions = new ArrayList<Double>();
     }
 
     public String getName() {
