@@ -35,4 +35,6 @@ public class OnlineAccount {
     public void setTransactions(ArrayList transactions) {
         this.transactions = transactions;
     }
-}
+
+//    public void addPaymentMethodToPaymentMethods(IChargeable)
+//}
