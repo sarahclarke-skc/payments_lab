@@ -28,7 +28,7 @@ public class GiftCard implements IChargeable {
         return 0;
     }
 
-    public double charge(double purchaseAmount) {
-        return balance -= purchaseAmount;
+    public void charge(double purchaseAmount) {
+        balance -= purchaseAmount;
     }
 }

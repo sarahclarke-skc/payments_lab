@@ -19,4 +19,12 @@ public class CreditCardTest {
     public void hasCardNumber() {
         assertEquals("012345", creditCard.getCardNumber());
     }
+
+    @Test
+    public void canAddPaymentToCharges() {
+        creditCard.charge(5.00);
+        creditCard.charge(5.00);
+        assertEquals(2, creditCard.getCharges().size());
+        assertEquals(4990.00, creditCard.getCreditLimit(), 0.001);
+    }
 }

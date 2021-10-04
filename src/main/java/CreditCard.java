@@ -10,4 +10,25 @@ public class CreditCard extends PaymentCard {
         this.creditLimit = creditLimit;
         this.riskMultiplier = riskMultiplier;
     }
+
+    public void charge(double purchaseAmount) {
+        addCharge(purchaseAmount);
+        creditLimit -= purchaseAmount;
+    }
+
+    public double getCreditLimit() {
+        return creditLimit;
+    }
+
+    public void setCreditLimit(double creditLimit) {
+        this.creditLimit = creditLimit;
+    }
+
+    public double getRiskMultiplier() {
+        return riskMultiplier;
+    }
+
+    public void setRiskMultiplier(double riskMultiplier) {
+        this.riskMultiplier = riskMultiplier;
+    }
 }
